@@ -1,0 +1,12 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /
+  static_files: Pages/SingaporeZoo.html
+  upload: Pages/SingaporeZoo.html
+
+- url: Pages/(.*)
+  static_files: Pages/\1
+  upload: (.*)
