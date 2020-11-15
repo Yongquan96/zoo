@@ -1,0 +1,219 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tickets</title>
+<link href="Headnews/favicon (1).ico" rel="icon" type="image/x-icon" />
+<link href="../Javascript And CSS/js-image-slider.css" rel="stylesheet" type="text/css">
+ <script src="../Javascript And CSS/js-image-slider.js" type="text/javascript"></script>
+ <script>
+ var image1=new Image()
+image1.src="Headnews/tumblr_mp3m02X2px1s6uhhqo1_1280.jpg"
+var image2=new Image()
+image2.src="Headnews/sidebar2.png"
+var image3=new Image()
+image3.src="Headnews/sidebar3.png"
+</script>
+<style>
+	.info{
+		border-radius: 10px;
+		float:left;
+		width:700px;
+		height: 100%;
+		background-color:#FFFFD7;
+		margin: 10px 30px;
+		padding: 10px 20px;
+	}
+	.info p{
+		font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+		font-size:12px;
+		margin-top: 10px;
+	}
+	.info table,h1 {
+		text-align:center;
+	}
+	form legend {
+		font-size:14px;
+	}
+	#insideform {
+		padding-top: 20px;
+	}
+</style>
+
+<script>
+	function cal() {
+		var adult=document.forms["myform"]["adult"].value;
+		var child=document.forms["myform"]["child"].value;
+		var senior=document.forms["myform"]["senior"].value;
+		var totalppl=adult+child+senior;
+		if(totalppl==0){
+			alert("You did not enter any transaction");
+		}
+		else{
+		var pricea=20.00*adult;
+		var pricec=10.00*child;
+		var prices=8.00*senior;
+		var pricetotal= pricea+pricec+prices;
+		alert(
+		"Adult Tickets: "+adult+
+		"\nChild Tickets: "+child+
+		"\nSenior Tickets: "+senior+
+		"\nThe Total Price of your ticket is: $"+pricetotal);
+		}
+	}
+</script>
+
+</head>
+
+<body>
+
+<div class="container">
+	
+<img src="Headnews/Openinghours.png" width="1000" height="100"> 
+ <div id="sse1">
+  <div id="sses1">
+    <ul>
+      <li><a href="SingaporeZoo.html">Home</a></li>
+      <li><a href="Exhibits/Exhibits.html">Exhibits &amp; Zones</a></li>
+      <li><a href="dining.html">Dining</a></li>
+      <li><a href="ContactUs.html">Contact Us</a></li>
+      <li><a href="#">Buy Ticket </a></li>
+    </ul>
+  </div>
+</div>
+	<marquee behavior="scroll" bgcolor="#457A36">
+    Welcome to the Singapore Zoo! Buy the tickets now to save up to 20% discounts! Hurry!
+    </marquee>
+<div class="info">
+<center><img src="Headnews/20%disc.png" width="450" height="45"></center>
+<h1>Admission Fees </h1>
+
+<table width="681" height="210" border="1" cellpadding="0">
+  <tr style="background-color:#096;">
+    <td width="148" height="60">Ticket</td>
+    <td width="154">Original Price</td>
+    <td width="158">Online Price</td>
+    <td width="161" rowspan="4" ><a href="#tickets"><img src="Headnews/buytickets.png" width="161" height="200"></a>
+    </td>
+    </tr>
+  <tr>
+    <td height="45" style="background-color:#096">Adult</td>
+    <td>SGD$28.00</td>
+    <td>SGD$20.00</td>
+    </tr>
+  <tr>
+    <td height="49" style="background-color:#096">Child(aged 3-11)*</td>
+    <td>SGD$18.00</td>
+    <td>SGD$10.00</td>
+    </tr>
+  <tr>
+    <td height="44" style="background-color:#096">Senior Citizen**</td>
+    <td>SGD$12.00</td>
+    <td>SGD$8.00</td>
+    </tr>
+</table>
+<p>All prices are in Singapore dollars and inculsive 7% GST.<br>
+  Prices are subjected to change without prior notice.<br>
+  *Admission for child below 3 years old is free<br>
+  **Senior Citizen admission only applicable for Singaporean or Singapore PR aged 60 and <br>
+  above. Senior citizens are required to present proof of identification.</p>
+  
+  <hr/>
+  
+  <form name="myform" onSubmit="cal()" id="tickets" method="post" action="formsubmit.html">
+  	<fieldset>
+    <legend> How many tickets you want? </legend>
+  	<div id="insideform">
+    <label for="adult">Adult</label>
+		<select id="adult" name="adult">
+            <option value=0> 0 </option>
+            <option value=1> 1 </option>
+            <option value=2> 2 </option>
+            <option value=3> 3 </option>
+            <option value=4> 4 </option>
+            <option value=5> 5 </option>
+            <option value=6> 6 </option>
+            <option value=7> 7 </option>
+            <option value=8> 8 </option>
+            <option value=9> 9 </option>
+            <option value=10> 10 </option>
+        </select>
+    <label for="child" name="child">Child</label>
+		<select id="child">
+            <option value=0> 0 </option>
+            <option value=1> 1 </option>
+            <option value=2> 2 </option>
+            <option value=3> 3 </option>
+            <option value=4> 4 </option>
+            <option value=5> 5 </option>
+            <option value=6> 6 </option>
+            <option value=7> 7 </option>
+            <option value=8> 8 </option>
+            <option value=9> 9 </option>
+            <option value=10> 10 </option>
+        </select>
+   	<label for="senior">Senior</label>
+		<select id="senior" name="senior">
+            <option value=0> 0 </option>
+            <option value=1> 1 </option>
+            <option value=2> 2 </option>
+            <option value=3> 3 </option>
+            <option value=4> 4 </option>
+            <option value=5> 5 </option>
+            <option value=6> 6 </option>
+            <option value=7> 7 </option>
+            <option value=8> 8 </option>
+            <option value=9> 9 </option>
+            <option value=10> 10 </option>
+        </select>
+        <br>
+        
+   <label for="pay">Payment by: </label>
+   		<input type="radio" id="pay" name="pay" value="NETS" required>NETS
+        <input type="radio" id="pay" name="pay" value="VISA" required>VISA
+        <input type="radio" id="pay" name="pay" value="MASTERCARD" required>MASTERCARD<br>        
+    
+    Visit Date: <input type="date" name="visit" id="visit" required/> <br>
+    Email: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="email" name="email" id="email" required />
+    
+   	<br><input name="" type="submit" value="Buy Tickets">
+    <br>
+    </div>
+    
+  	</fieldset>  
+  </form>
+</div>
+
+<div class="sidebar">
+
+<img src="Headnews/tumblr_mp3m02X2px1s6uhhqo1_1280.jpg" name="slide">
+<script>
+<!--
+//variable that will increment through the images
+var step=1
+function slideit(){
+if (!document.images)
+return
+document.images.slide.src=eval("image"+step+".src")
+if (step<3)
+step++
+else
+step=1
+setTimeout("slideit()",5000)
+}
+slideit()
+//-->
+</script>
+
+
+</div>
+
+  <div class="footer">
+    <p>Terms &amp; Conditions | Privacy Policy</p>
+    <p><strong>&copy;&nbsp;Copyright 2013, Wildlife Reserve Singapore Group, All Rights Reserved.</strong></p>
+    <p>Singapore Zoo are trademarks or registered trademarks of WRS Group <br>in Singapore and/ or other countries    </p>
+</div>
+</div>
+
+</body>
+</html>

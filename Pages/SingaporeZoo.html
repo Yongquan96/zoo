@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+
+<script type="text/javascript">
+<!--
+var image1=new Image()
+image1.src="Headnews/sidebar3.png"
+var image2=new Image()
+image2.src="Headnews/sidebar2.png"
+var image3=new Image()
+image3.src="Headnews/tumblr_mp3m02X2px1s6uhhqo1_1280.jpg"
+//-->
+function froggame( ) {window.open('../game/froggame.html','bob','width=450,height=180') }
+function visitinfo( ) {window.open('visitorinfo.html','bob','width=450,height=300') }
+
+</script>
+<style>
+
+video p {
+	font-size:14px;
+	margin: 20px;
+}
+#belowitem img {
+	margin-left: 30px;
+	margin-right: 30px;
+}
+</style>
+<meta charset="utf-8">
+<title>Home</title>
+<link href="../Javascript And CSS/slider.css" rel="stylesheet" type="text/css"/>
+<link href="../Javascript And CSS/js-image-slider.css" rel="stylesheet" type="text/css" />
+    <script src="../Javascript And CSS/js-image-slider.js" type="text/javascript"></script>
+<link href="Headnews/favicon (1).ico" rel="icon" type="image/x-icon" />
+</head>
+
+<body>
+<div class="container">
+
+  <div class="content">
+  <marquee behavior="scroll" bgcolor="#457A36">
+    Welcome to the Singapore Zoo! The opening hour of the zoo is 8.30am to 6.00pm
+    </marquee>
+    <div id="sliderFrame">
+        <div id="slider">
+        	<img src="Headnews/Headnew2.png" />
+            <img src="Headnews/Headnews1.png" />
+
+    </div>
+    </div>
+
+    <div id="sse1">
+  <div id="sses1">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="Exhibits/Exhibits.html">Exhibits &amp; Zones</a></li>
+      <li><a href="dining.html">Dining</a></li>
+      <li><a href="ContactUs.html">Contact Us</a></li>
+      <li><a href="Tickets.html">Buy Ticket </a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="sidebar">
+
+<a href="exhibitszones.html"><img src="Headnews/sidebar3.png" name="slide"></a>
+<script>
+<!--
+//variable that will increment through the images
+var step=1
+function slideit(){
+if (!document.images)
+return
+document.images.slide.src=eval("image"+step+".src")
+if (step<3)
+step++
+else
+step=1
+setTimeout("slideit()",5000)
+}
+slideit()
+//-->
+</script>
+
+</div>
+<div class="maininfo">
+<video src="video/Zoo.mp4" width="800" height="500" controls poster="Headnews/poster.png">
+<p>Your browser does not support this video tag.</p>
+</video>
+</div>
+
+<!-- end .content -->
+  <div align="center" id="belowitem">
+  <img src="Headnews/visitorinfo.png" width="200" height="50" onClick="visitinfo()">
+  <a target="new" onClick="froggame();"><img src="Headnews/froggame.png" width="200" height="50"></a>
+    <a href="parkmap.pdf" target="_blank"><img src="Headnews/zoomap.png" width="200" height="50"></a></div>
+  </div>
+  <div class="footer">
+    <p>Terms &amp; Conditions | Privacy Policy</p>
+    <p><strong>&copy;&nbsp;Copyright 2013, Wildlife Reserve Singapore Group, All Rights Reserved.</strong></p>
+    <p>Singapore Zoo are trademarks or registered trademarks of WRS Group <br>in Singapore and/ or other countries    </p>
+  
+    <!-- end .footer --></div>
+<!-- end .container --></div>
+</body>
+</html>

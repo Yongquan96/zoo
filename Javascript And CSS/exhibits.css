@@ -1,0 +1,75 @@
+.leftsidebar {
+	float: right;
+	width: 220px;
+	height: 100%;
+	background-color:#0B3E20;
+	border-radius: 10px;
+	margin-left: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.leftsidebar ul {
+	margin: 10px;
+	padding: 5px;
+	list-style: none;
+	background-color:#206029;
+}
+
+.leftsidebar h3 {
+	margin: 10px 10px 10px 10px;
+	padding: 5px;
+	color:#206029;
+	font-family:"Arial Black", Gadget, sans-serif
+}
+.leftsidebar li {
+	padding-top: 5px;
+	padding-left: 6px;
+	padding-bottom: 2px;
+	border:double;
+	border-color:#030;
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:14px;
+}
+.info {
+	border-radius: 20px;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	float: right;
+	width: 550px;
+	height: 100%;
+	background-image:url(../Pages/Headnews/treebackground1.png);
+	background-repeat:no-repeat;
+	background-color:#FFFFD7;
+}
+.info h1 {
+	padding-left: 55px;
+	margin-top: 20px;
+	color:#000;
+}
+.info p {
+	font-size:12px;
+	padding: 0 30px 0px 30px;
+}
+
+p#first {
+	margin-top: 60px;
+}
+.usefulinfo {
+	border-top-left-radius: 12px;
+	border-bottom-left-radius: 12px;
+	background-color:#CFC;
+}
+.usefulinfo p{
+	font-size:10px;
+	padding-bottom: 5px;
+}
+.usefulinfo h5{
+	margin-top: 10px;
+	padding-top: 10px;
+}
+.usefulinfo a:link {
+	color:#000;
+	text-decoration: underline; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+}

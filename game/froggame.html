@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+<head>
+<link href="../Pages/Headnews/favicon (1).ico" rel="icon" type="image/x-icon" />
+<meta charset="utf-8">
+<title>Frog Game</title>
+<script language="JavaScript">
+var i, Moves, IsOver, Max=9, StartTime, EndTime;
+PreFld = new Array(Max);
+Fld = new Array(Max);
+Pic= new Array(3);
+for (i=0; i<3; i++)
+{ Pic[i] = new Image();
+  Pic[i].src = "frog"+i+".gif"; 
+}
+
+function Init(IsNew)
+{ var zz;
+  if (IsNew)
+  { for (i=0; i<Max; i++)
+      PreFld[i]=0;
+    zz=Math.round(Math.random()*100)%3+2;
+    for (i=(Max-3)/2; i>=0; i--)
+    { if (zz>0) PreFld[i]=1;
+      zz--;
+    }
+    zz=Math.round(Math.random()*100)%3+2;
+    for (i=(Max+1)/2; i<Max; i++)
+    { if (zz>0) PreFld[i]=2;
+      zz--;
+    }
+  }
+  for (i=0; i<Max; i++)
+    Fld[i]=PreFld[i];
+  IsOver=false;
+  Moves=0;
+  RefreshScreen();  
+  Now = new Date();
+  StartTime = Now.getTime() / 1000;
+}
+
+function IsEmptyFld(ii)
+{ if (ii<0) return(false);
+  if (ii>=Max) return(false);
+  if (Fld[ii]!=0) return(false);
+  return(true);
+}
+
+function Clicked(ii)
+{ if (IsOver) return;
+  if (Fld[ii]==0) return;
+  if (Fld[ii]==1)
+  { if (IsEmptyFld(ii+1))
+    { Fld[ii+1]=1;
+      Fld[ii]=0;
+      Moves++;
+      RefreshScreen();
+    }
+    else
+    { if (IsEmptyFld(ii+2))
+      { Fld[ii+2]=1;
+        Fld[ii]=0;
+        Moves++;
+        RefreshScreen();
+      }
+    }
+  }
+  else
+  { if (IsEmptyFld(ii-1))
+    { Fld[ii-1]=2;
+      Fld[ii]=0;
+      Moves++;
+      RefreshScreen();
+    }
+    else
+    { if (IsEmptyFld(ii-2))
+      { Fld[ii-2]=2;
+        Fld[ii]=0;
+        Moves++;
+        RefreshScreen();
+      }
+    }
+  }
+}
+
+function OverTest()
+{ var nn1=-1, nn2;
+  for (i=0; i<Max; i++)
+  { if (Fld[i]==2) nn2=i;
+    if ((Fld[i]==1) && (nn1<0)) nn1=i; 
+  }
+  if (nn2<nn1)
+    IsOver=true;
+  else
+    IsOver=false; 
+  return(IsOver);
+}
+
+function RefreshScreen()
+{ for (i=0; i < Max; i++)
+    window.document.images[i].src = Pic[Fld[i]].src;
+  if (OverTest()) 
+  { Now = new Date();
+    EndTime = Now.getTime() / 1000;
+    i=Math.floor(EndTime - StartTime);
+    alert("Super, you solved this game with "+Moves+" moves in "+i+" seconds !");
+  }
+}
+</script>
+
+</head>
+
+<body bgcolor=#88CC88>
+<div align=center>
+<table border cellpadding=4 cellspacing=4  bgcolor=#EEFFEE><tr><td>
+<table noborder cellpadding=0 cellspacing=0><tr align=center>
+<script language="JavaScript">
+document.open("text/plain");
+for (i=0; i < Max; i++)
+  document.writeln("<td><IMG src=\"frog1.gif\" border=0 width=45 height=45 onMouseDown=\"Clicked("+i+")\"></td>");
+document.close();
+</script>
+</tr></table>
+</td></tr></table>
+<br>
+<form>
+  <table noborder cellpadding=4 cellspacing=4 width=360><tr align=center>
+    <td align=left>
+      <input type=button value="REPEAT" width=108 style="width:108" onClick="javascript:Init(false)">
+    </td>
+    <td align=right>
+      <input type=button value="NEW GAME" width=108 style="width:108" onClick="javascript:Init(true)">
+    </td>
+  </tr></table>
+</form>
+<span style="font-family:Arial, Helvetica, sans-serif; font-size:12px;">Your objective is to make sure the <span style="color:#006C1C">Green frog</span> or the <span style="color:#515100">Yellow frog </span>is all cross over to the other end.</span>
+</div>
+<script language="JavaScript">
+  Init(true);
+</script>
+</body>
+
+</html>

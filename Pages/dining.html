@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Exhibits</title>
+<link href="../Javascript And CSS/js-image-slider.css" rel="stylesheet" type="text/css"/>
+<link href="../Javascript And CSS/exhibits.css" rel="stylesheet" type="text/css"/>
+<script src="../Javascript And CSS/js-image-slider.js" type="text/javascript"></script>
+<link href="Headnews/favicon (1).ico" rel="icon" type="image/x-icon" />
+<script>
+ var image1=new Image()
+image1.src="Headnews/tumblr_mp3m02X2px1s6uhhqo1_1280.jpg"
+var image2=new Image()
+image2.src="Headnews/sidebar2.png"
+var image3=new Image()
+image3.src="Headnews/sidebar3.png"
+</script>
+</head>
+
+<body>
+
+<div class="container">
+  <div class="content">
+    
+         <img src="Headnews/Openinghours.png"/>
+    
+        <div id="sse1">
+      <div id="sses1">
+        <ul>
+          <li><a href="SingaporeZoo.html">Home</a></li>
+          <li><a href="Exhibits/Exhibits.html">Exhibits &amp; Zones</a></li>
+          <li><a href="dining.html">Dining</a></li>
+          <li><a href="ContactUs.html">Contact Us</a></li>
+          <li><a href="Tickets.html">Buy Ticket </a></li>
+        </ul>
+      </div>
+    </div>
+     <div class="sidebar">
+        <img src="Headnews/tumblr_mp3m02X2px1s6uhhqo1_1280.jpg" name="slide">
+        <script>
+		<!--
+		//variable that will increment through the images
+		var step=1
+		function slideit(){
+		if (!document.images)
+		return
+		document.images.slide.src=eval("image"+step+".src")
+		if (step<3)
+		step++
+		else
+		step=1
+		setTimeout("slideit()",5000)
+		}
+		slideit()
+		//-->
+		</script>
+        <div class="usefulinfo">
+        <h5> Useful Info </h5>
+        <p> 80 Mandai Lake Road <br>
+        Singapore 729826 <br>
+        Tel: (65) 6269 3411 <br>
+        <a href="mailto:infocounter.zoo@wrs.com.sg"> infocounter.zoo@wrs.com.sg</a><br>
+        </p>
+        <p>
+        <b>Opening Hours:</b><br>
+        8.30am to 6.00pm daily <br>
+        <i>(Last ticket sale at 5.30pm)</i></p>
+     </div>
+        </div>
+<div class="info">
+	
+    <h1>The Wild Deli <img src="Headnews/bulletleaf.png" width="60" height="60"></h1>
+    <center>
+ 	<img src="Headnews/img-wild-deli.jpg">
+    </center>
+  	<p id="first">The Wild Deli serves a fine selection of gourmet sandwiches and coffee for your enjoyment. Spoilt for choice? Why not select our freshly made chef creations or delectable savoury breads such as Custard Raisin, Cinnamon Twist and Butter Croissant. Best served with a Latte or Cappuccino.</p>
+
+<div id="advert">
+    <p>Variety of Food: French Toast, French Bread, Black Burger, Coffee.</p>
+
+</div><!--end of advert-->
+
+</div><!-- End of Info -->
+
+ <div class="leftsidebar">
+	<h3>DINING</h3>
+    <ul>
+        <a href="dining.html"><li> The Wild Deli </li></a>
+    	<a href="dining(AhMeng).html"><li> Ah Meng Restaurant</li></a>
+        <a href="dining(Kopi).html"><li> Ah Meng Kopi </li></a>
+    </ul>
+    <h3> MENU </h3>
+   	
+    <center>
+    <marquee behavior="alternate" direction="down" height="440px">
+        <img src="Food/wild(1).jpg" alt="">
+        <img src="Food/wild(2).jpg" alt="">
+        <img src="Food/wild(3).jpg" alt="">
+        <img src="Food/wild(4).jpg" alt="">
+        <img src="Food/wild(1).jpg" alt="">
+        <img src="Food/wild(2).jpg" alt="">
+        <img src="Food/wild(3).jpg" alt="">
+        <img src="Food/wild(4).jpg" alt="">
+    </marquee></center>
+ </div>
+ 
+ 
+ 
+<!-- end .content -->
+  </div>
+  <div class="footer">
+    <p>Terms &amp; Conditions | Privacy Policy</p>
+    <p><strong>&copy;&nbsp;Copyright 2013, Wildlife Reserve Singapore Group, All Rights Reserved.</strong></p>
+    <p>Singapore Zoo are trademarks or registered trademarks of WRS Group <br>in Singapore and/ or other countries    </p>
+  
+    <!-- end .footer --></div>
+<!-- end .container --></div>
+
+
+</body>
+</html>
